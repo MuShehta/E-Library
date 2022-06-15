@@ -37,7 +37,7 @@ namespace E_Library.Controllers
 
             if (user == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             return user;
@@ -77,7 +77,7 @@ namespace E_Library.Controllers
             {
                 if (!UserExists(id))
                 {
-                    return NotFound();
+                    return BadRequest();
                 }
                 else
                 {
