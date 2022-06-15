@@ -33,7 +33,7 @@ namespace E_Library.Controllers
 
             if (buy == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             return buy;
@@ -57,7 +57,7 @@ namespace E_Library.Controllers
             
             var _user = _context.users.Find(id);
             if (_user == null)
-                return NotFound("User Not Found");
+                return BadRequest("User Not Found");
 
             
 
@@ -85,7 +85,7 @@ namespace E_Library.Controllers
             var buy = await _context.buy.FindAsync(id);
             if (buy == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             _context.buy.Remove(buy);
