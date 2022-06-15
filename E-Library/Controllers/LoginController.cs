@@ -31,7 +31,7 @@ namespace E_Library.Controllers
 
             var user = _context.users.FirstOrDefault(u => u.user_name == user_name);
             if (user == null)
-                return NotFound("User not found");
+                return BadRequest("User not found");
 
             if (user.password == password)
             {
